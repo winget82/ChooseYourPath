@@ -84,16 +84,16 @@ namespace ChooseYourPath
                     "Wait and watch for movement",//leads to level 001cbb
                     "Yell \"Hello, is anyone out there?!\"" }},//leads to level 001cbc
 
-                {"level_001cc", new string[] {"Text 001cc",
-                    "choice1cc",//leads to level 001cca
-                    "choice2cc",//leads to level 001ccb
-                    "choice3cc" }},//leads to level 001ccc
+                {"level_001cc", new string[] {"As you feel the ground around you, you feel a sharp sensation in your hand.  A few moments later and you don't feel so good...  The little light you can see, slowly blurs and fades to black...  You will never know what happened.  Maybe someone will find your body, if anyone else exists...",
+                    "Restart",//trigger word to start entire game over
+                    "Try Again",//trigger word to redo same exact level, same three choices
+                    "Exit" }},//trigger word to leave program
 
                 //TIER 3 OF CHOICES
-                {"level_001aaa", new string[] {"Text 001aaa",
-                    "choice1aaa",//leads to level 001aaaa
-                    "choice2aaa",//leads to level 001aaab
-                    "choice3aaa" }},//leads to level 001aaac
+                {"level_001aaa", new string[] {"As you strike the lighter, it lights up immediately.  The heat from the flame warms your thumb and pointer finger.  You look around and notice you are in a small, one room cave.  The walls, floor, and ceiling are solid rock.  You don't see anything to peak your interest...",
+                    "Go outside",//leads to level 001aaaa
+                    "Wait and watch for movement",//leads to level 001aaab
+                    "Yell \"Hello, is anyone out there?!\"" }},//leads to level 001aaac
 
                 {"level_001aba", new string[] {"Text 001aba",
                     "choice1aba",//leads to level 001abaa
@@ -128,12 +128,8 @@ namespace ChooseYourPath
                 {"level_001cba", new string[] {"Text 001cba",
                     "choice1cba",//leads to level 001cbaa
                     "choice2cba",//leads to level 001cbab
-                    "choice3cba" }},//leads to level 001cbac
+                    "choice3cba" }}//leads to level 001cbac
 
-                {"level_001cca", new string[] {"Text 001cca",
-                    "choice1cca",//leads to level 001ccaa
-                    "choice2cca",//leads to level 001ccab
-                    "choice3cca" }}//leads to level 001ccac
 
 
         };
