@@ -1,18 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+﻿using System.Collections.Generic;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -21,7 +9,7 @@ namespace ChooseYourPath
     /// <summary>
     /// A simple choose your own adventure type game.
     /// </summary>
-    
+
     public sealed partial class MainPage : Page
     {
         //Declare Choice object, assign false values
@@ -30,13 +18,106 @@ namespace ChooseYourPath
         //Levels Dictionary
         Dictionary<string, string[]> levelsDic = new Dictionary<string, string[]>
             {
-                {"level_001", new string[] {"Text 001", "choice1", "choice2", "choice3"}},//starting level
-                {"level_001a", new string[] {"Text 001a", "choice1a", "choice2a", "choice3a"}},//level as a result of ChoiceButton1
-                {"level_001b", new string[] {"Text 001b", "choice1b", "choice2b", "choice3b"}},//level as a result of ChoiceButton2
-                {"level_001c", new string[] {"Text 001c", "choice1c", "choice2c", "choice3c"}},//level as a result of ChoiceButton3
-                {"level_001aa", new string[] {"Text 001aa", "choice1aa", "choice2aa", "choice3aa"}},
-                {"level_001ab", new string[] {"Text 001ab", "choice1ab", "choice2ab", "choice3ab"}},
-                {"level_001ac", new string[] {"Text 001ac", "choice1ac", "choice2ac", "choice3ac"}}
+                //starting level
+                {"level_001", new string[] {"You awake to feel a hard and smooth surface below you.  It's very dark and the air is damp, but you can see light coming in from an opening in the distance.  You don't remember how you got here.  You seem to be alone...",
+                    "Check your pockets",//leads to level 001a
+                    "Head toward the light",//leads to level 001b
+                    "Try to remember anything" }},//leads to level 001c
+
+                //level as a result of ChoiceButton1
+                {"level_001a", new string[] {"You check the pockets of your pants to find what feels like a pocket knife in your front left pocket and a lighter in your front right pocket.  There is nothing in your back pockets...",
+                    "Get out your lighter",//leads to level 001aa
+                    "Get out your knife",//leads to level 001ab
+                    "Head toward the lighted opening" }},//leads to level 001ac
+
+                //level as a result of ChoiceButton2
+                {"level_001b", new string[] {"You stand up, feeling a little disoriented, and begin to move toward the light.  The opening appears to be the mouth of a cave.  As you get closer to the opening you can see what looks like moss covered trees just outside the opening...",
+                    "Go outside",//leads to level 001ba
+                    "Wait and watch for movement",//leads to level 001bb
+                    "Yell \"Hello, is anyone out there?!\"" }},//leads to level 001bc
+
+                //level as a result of ChoiceButton3
+                {"level_001c", new string[] {"You close your eyes and think deeply, trying to recall any memories...  You see a flash of light in your mind, and remember a loud rumbling sound.  You remember seeing the ground around you shake...",
+                    "Check your pockets",//leads to level 001ca
+                    "Head toward the lighted opening",//leads to level 001cb
+                    "Check the ground around you" }},//leads to level 001cc
+
+                {"level_001aa", new string[] {"You get out your lighter.  From the feel of it, it feels like an old metal zippo lighter, and when you open it the smell of lighter fluid fumes fills your nose...",
+                    "Light it",//leads to level 001aaa
+                    "Throw it",//leads to level 001aab
+                    "Put it back in your pocket" }},//leads to level 001aac
+
+                {"level_001ab", new string[] {"You get out your pocket knife.  It was clipped to your pocket with a built on clip.  Probably there to keep it from falling out of your pocket.  It is a spring assisted knife, with a tension bar that allows the blade to flip out when part of the blade is pressed.  It was designed to clip in your left pocket to keep the blade from opening in your pocket...",
+                    "Flip the blade out",//leads to level 001aba
+                    "Clip it back in your left pocket",//leads to level 001abb
+                    "Clip it in your right pocket" }},//leads to level 001abc
+
+                {"level_001ac", new string[] {"Text 001ac",
+                    "choice1ac",//leads to level 001aca
+                    "choice2ac",//leads to level 001acb
+                    "choice3ac" }},//leads to level 001acc
+
+                {"level_001ba", new string[] {"Text 001ba",
+                    "choice1ba",//leads to level 001baa
+                    "choice2ba",//leads to level 001bab
+                    "choice3ba" }},//leads to level 001bac
+
+                {"level_001bb", new string[] {"Text 001bb",
+                    "choice1bb",//leads to level 001bba
+                    "choice2bb",//leads to level 001bbb
+                    "choice3bb" }},//leads to level 001bbc
+
+                {"level_001bc", new string[] {"Text 001bc",
+                    "choice1bc",//leads to level 001bca
+                    "choice2bc",//leads to level 001bcb
+                    "choice3bc" }},//leads to level 001bcc
+
+                {"level_001ca", new string[] {"You check the pockets of your pants to find what feels like a pocket knife in your front left pocket and a lighter in your front right pocket.  There is nothing in your back pockets...",
+                    "Get out your lighter",//leads to level 001caa
+                    "Get out your knife",//leads to level 001cab
+                    "Head toward the lighted opening" }},//leads to level 001cac
+
+                {"level_001cb", new string[] {"You stand up, feeling a little disoriented, and begin to move toward the light.  The opening appears to be the mouth of a cave.  As you get closer to the opening you can see what looks like moss covered trees just outside the opening...",
+                    "choice1cb",//leads to level 001cba
+                    "choice2cb",//leads to level 001cbb
+                    "choice3cb" }},//leads to level 001cbc
+
+                {"level_001cc", new string[] {"Text 001cc",
+                    "choice1cc",//leads to level 001cca
+                    "choice2cc",//leads to level 001ccb
+                    "choice3cc" }},//leads to level 001ccc
+
+                {"level_001aaa", new string[] {"Text 001aaa",
+                    "choice1aaa",//leads to level 001aaaa
+                    "choice2aaa",//leads to level 001aaab
+                    "choice3aaa" }},//leads to level 001aaac
+
+                {"level_001aba", new string[] {"Text 001aba",
+                    "choice1aba",//leads to level 001abaa
+                    "choice2aba",//leads to level 001abab
+                    "choice3aba" }},//leads to level 001abac
+
+                {"level_001aca", new string[] {"Text 001aca",
+                    "choice1aca",//leads to level 001acaa
+                    "choice2aca",//leads to level 001acab
+                    "choice3aca" }},//leads to level 001acac
+
+                {"level_001baa", new string[] {"Text 001baa",
+                    "choice1baa",//leads to level 001baaa
+                    "choice2baa",//leads to level 001baab
+                    "choice3baa" }},//leads to level 001baac
+
+                {"level_001bba", new string[] {"Text 001bba",
+                    "choice1bba",//leads to level 001bbaa
+                    "choice2bba",//leads to level 001bbab
+                    "choice3bba" }},//leads to level 001bbac
+
+                {"level_001bca", new string[] {"Text 001bca",
+                    "choice1bca",//leads to level 001bcaa
+                    "choice2bca",//leads to level 001bcab
+                    "choice3bca" }}//leads to level 001bcac
+
+
         };
         //to access the values levelsDic["level_001a"][0];
 

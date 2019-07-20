@@ -8,14 +8,28 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <Page.Resources>
+        <ResourceDictionary>
+            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="ForestGreen"/><!--sets hover color-->
+        </ResourceDictionary>
+    </Page.Resources>
+    
     <Grid x:Name="MainScreen" Background="Black">
-        <Button x:Name ="ChoiceButton1" Content="Choice # 1" Margin="40,450,0,0" VerticalAlignment="Top" Background="#7F000000" Width="275" Foreground="White" BorderBrush="White" Click="ChoiceButton1_Click" Opacity="0.9"/>
-        <Button x:Name ="ChoiceButton2" Content="Choice # 2" Margin="40,500,0,0" VerticalAlignment="Top" Background="#7F000000" Width="275" Foreground="White" BorderBrush="White" Click="ChoiceButton2_Click" Opacity="0.9"/>
-        <Button x:Name ="ChoiceButton3" Content="Choice # 3" Margin="40,550,0,0" VerticalAlignment="Top" Background="#7F000000" Width="275" Foreground="White" BorderBrush="White" Click="ChoiceButton3_Click" Opacity="0.9"/>
-        <TextBlock x:Name="ReadingPane" HorizontalAlignment="Left" Margin="40,75,0,0" Text="Text to be read goes here..." TextWrapping="Wrap" VerticalAlignment="Top" Height="344" Width="275" FontStyle="Italic" Foreground="White"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/><!--this is Grid.Row="0"-->
+            <RowDefinition Height="190"/><!--this is Grid.Row="1"-->
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="ReadingPane" Grid.Row="0" Margin="50,30,50,0" Text="Text to be read goes here..." TextWrapping="Wrap" VerticalAlignment="Top" Height="Auto" Width="Auto" FontStyle="Italic" Foreground="White"/>
+        
+        <Grid Grid.Row="1">
+            <Button x:Name ="ChoiceButton1" Content="Choice # 1" Margin="0,0,0,130" VerticalAlignment="Bottom" Background="#7F000000" Width="275" Foreground="White" BorderBrush="White" Click="ChoiceButton1_Click" Opacity="0.9" HorizontalAlignment="Center"/>
+            <Button x:Name ="ChoiceButton2" Content="Choice # 2" Margin="0,0,0,80" VerticalAlignment="Bottom" Background="#7F000000" Width="275" Foreground="White" BorderBrush="White" Click="ChoiceButton2_Click" Opacity="0.9" HorizontalAlignment="Center"/>
+            <Button x:Name ="ChoiceButton3" Content="Choice # 3" Margin="0,0,0,30" VerticalAlignment="Bottom" Background="#7F000000" Width="275" Foreground="White" BorderBrush="White" Click="ChoiceButton3_Click" Opacity="0.9" HorizontalAlignment="Center"/>
+        </Grid>
 
     </Grid>
 </Page>
-    
+
 <!--https://stackoverflow.com/questions/38778715/uwp-button-changes-colors-when-mouse-hovers-over-->
 <!--https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/xaml-styles#lightweight-styling-->
