@@ -24,6 +24,7 @@ namespace ChooseYourPath
                     "Head toward the light",//leads to level 001b
                     "Try to remember anything" }},//leads to level 001c
 
+                //TIER 1 OF CHOICES
                 //level as a result of ChoiceButton1
                 {"level_001a", new string[] {"You check the pockets of your pants to find what feels like a pocket knife in your front left pocket and a lighter in your front right pocket.  There is nothing in your back pockets...",
                     "Get out your lighter",//leads to level 001aa
@@ -42,6 +43,7 @@ namespace ChooseYourPath
                     "Head toward the lighted opening",//leads to level 001cb
                     "Check the ground around you" }},//leads to level 001cc
 
+                //TIER 2 OF CHOICES
                 {"level_001aa", new string[] {"You get out your lighter.  From the feel of it, it feels like an old metal zippo lighter, and when you open it the smell of lighter fluid fumes fills your nose...",
                     "Light it",//leads to level 001aaa
                     "Throw it",//leads to level 001aab
@@ -52,17 +54,17 @@ namespace ChooseYourPath
                     "Clip it back in your left pocket",//leads to level 001abb
                     "Clip it in your right pocket" }},//leads to level 001abc
 
-                {"level_001ac", new string[] {"Text 001ac",
-                    "choice1ac",//leads to level 001aca
-                    "choice2ac",//leads to level 001acb
-                    "choice3ac" }},//leads to level 001acc
+                {"level_001ac", new string[] {"You stand up, feeling a little disoriented, and begin to move toward the light.  The opening appears to be the mouth of a cave.  As you get closer to the opening you can see what looks like moss covered trees just outside the opening...",
+                    "Go outside",//leads to level 001aca
+                    "Wait and watch for movement",//leads to level 001acb
+                    "Yell \"Hello, is anyone out there?!\"" }},//leads to level 001acc
 
-                {"level_001ba", new string[] {"Text 001ba",
-                    "choice1ba",//leads to level 001baa
-                    "choice2ba",//leads to level 001bab
-                    "choice3ba" }},//leads to level 001bac
+                {"level_001ba", new string[] {"As you step outside, you hear partially damp leaves quietly pressed beneath your shoes.  It is probably mid day from your judgement, according to the placement of the sun in the sky.  You look behind you to notice it was indeed a cave you were in, and it's mouth was at the bottom of a sheer cliff face.  Before you, you see a dense moss covered forest stretching the distance of your range of sight...",
+                    "Inspect the cliff",//leads to level 001baa
+                    "Head out into the forest",//leads to level 001bab
+                    "Inspect around the mouth of the cave" }},//leads to level 001bac
 
-                {"level_001bb", new string[] {"Text 001bb",
+                {"level_001bb", new string[] {"As you wait, paying close attention and focusing your eyes the best you can, you think you see movement outside, but you are not sure.  Was that movement... or are my eyes playing tricks on me...?  The darkness around you is effecting the ability of your eyes to focus...",
                     "choice1bb",//leads to level 001bba
                     "choice2bb",//leads to level 001bbb
                     "choice3bb" }},//leads to level 001bbc
@@ -78,15 +80,16 @@ namespace ChooseYourPath
                     "Head toward the lighted opening" }},//leads to level 001cac
 
                 {"level_001cb", new string[] {"You stand up, feeling a little disoriented, and begin to move toward the light.  The opening appears to be the mouth of a cave.  As you get closer to the opening you can see what looks like moss covered trees just outside the opening...",
-                    "choice1cb",//leads to level 001cba
-                    "choice2cb",//leads to level 001cbb
-                    "choice3cb" }},//leads to level 001cbc
+                    "Go outside",//leads to level 001cba
+                    "Wait and watch for movement",//leads to level 001cbb
+                    "Yell \"Hello, is anyone out there?!\"" }},//leads to level 001cbc
 
                 {"level_001cc", new string[] {"Text 001cc",
                     "choice1cc",//leads to level 001cca
                     "choice2cc",//leads to level 001ccb
                     "choice3cc" }},//leads to level 001ccc
 
+                //TIER 3 OF CHOICES
                 {"level_001aaa", new string[] {"Text 001aaa",
                     "choice1aaa",//leads to level 001aaaa
                     "choice2aaa",//leads to level 001aaab
@@ -115,7 +118,22 @@ namespace ChooseYourPath
                 {"level_001bca", new string[] {"Text 001bca",
                     "choice1bca",//leads to level 001bcaa
                     "choice2bca",//leads to level 001bcab
-                    "choice3bca" }}//leads to level 001bcac
+                    "choice3bca" }},//leads to level 001bcac
+
+                {"level_001caa", new string[] {"Text 001caa",
+                    "choice1caa",//leads to level 001caaa
+                    "choice2caa",//leads to level 001caab
+                    "choice3caa" }},//leads to level 001caac
+
+                {"level_001cba", new string[] {"Text 001cba",
+                    "choice1cba",//leads to level 001cbaa
+                    "choice2cba",//leads to level 001cbab
+                    "choice3cba" }},//leads to level 001cbac
+
+                {"level_001cca", new string[] {"Text 001cca",
+                    "choice1cca",//leads to level 001ccaa
+                    "choice2cca",//leads to level 001ccab
+                    "choice3cca" }}//leads to level 001ccac
 
 
         };
