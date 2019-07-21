@@ -65,11 +65,11 @@ namespace ChooseYourPath
                     "Inspect around the mouth of the cave" }},//leads to level 001bac
 
                 {"level_001bb", new string[] {"As you wait, paying close attention and focusing your eyes the best you can, you think you see movement outside, but you are not sure.  Was that movement... or are my eyes playing tricks on me...?  The darkness around you is effecting the ability of your eyes to focus...",
-                    "choice1bb",//leads to level 001bba
-                    "choice2bb",//leads to level 001bbb
-                    "choice3bb" }},//leads to level 001bbc
+                    "Go outside",//leads to level 001bba
+                    "Check your pockets",//leads to level 001bbb
+                    "Go to sleep" }},//leads to level 001bbc
 
-                {"level_001bc", new string[] {"Text 001bc",
+                {"level_001bc", new string[] {"You take a deep breath, and yell as loud as you can \"Hello, is anyone out there?!\"  You here your voice echo back to you several times.  As you wait patiently for a response, you hear nothing...  not even the chirp of a bird...",
                     "choice1bc",//leads to level 001bca
                     "choice2bc",//leads to level 001bcb
                     "choice3bc" }},//leads to level 001bcc
@@ -188,9 +188,24 @@ namespace ChooseYourPath
         
         public void nextLevel(string level)
         {
-            //load next level data from dictionary and update ReadingPane and button text
-            levelChoices(levelsDic[level][1], levelsDic[level][2], levelsDic[level][3]);
-            ReadingPane.Text = levelsDic[level][0];
+            if(level.Contains("Restart"))
+            {
+                //start game over at level_001
+            }
+            else if (level.Contains("Try Again"))
+            {
+                //redo the last scenario with the same 3 choices
+            }
+            else if (level.Contains("Exit"))
+            {
+                //exit game going back to main screen - yet to be made
+            }
+            else
+            {
+                //load next level data from dictionary and update ReadingPane and button text
+                levelChoices(levelsDic[level][1], levelsDic[level][2], levelsDic[level][3]);
+                ReadingPane.Text = levelsDic[level][0];
+            }
         }
         
         private void ChoiceButton1_Click(object sender, RoutedEventArgs e)
@@ -204,6 +219,8 @@ namespace ChooseYourPath
             //update current level
             string level = userChoice.CurrentLevel.ToString();
             string updatedLevel = level += "a";
+            //if the button clicked's content equals Restart, Try Again, or Exit
+            //add that to the level string to get picked up by nextLevel()
             userChoice.CurrentLevel = updatedLevel;
             nextLevel(userChoice.CurrentLevel);
         }
@@ -219,6 +236,8 @@ namespace ChooseYourPath
             //update current level
             string level = userChoice.CurrentLevel.ToString();
             string updatedLevel = level += "b";
+            //if the button clicked's content equals Restart, Try Again, or Exit
+            //add that to the level string to get picked up by nextLevel()
             userChoice.CurrentLevel = updatedLevel;
             nextLevel(userChoice.CurrentLevel);
         }
@@ -235,6 +254,8 @@ namespace ChooseYourPath
             //update current level
             string level = userChoice.CurrentLevel.ToString();
             string updatedLevel = level += "c";
+            //if the button clicked's content equals Restart, Try Again, or Exit
+            //add that to the level string to get picked up by nextLevel()
             userChoice.CurrentLevel = updatedLevel;
             nextLevel(userChoice.CurrentLevel);
         }
