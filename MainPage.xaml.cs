@@ -105,15 +105,15 @@ namespace ChooseYourPath
                     "choice2aca",//leads to level 001acab
                     "choice3aca" }},//leads to level 001acac
 
-                {"level_001baa", new string[] {"Text 001baa",
-                    "choice1baa",//leads to level 001baaa
-                    "choice2baa",//leads to level 001baab
-                    "choice3baa" }},//leads to level 001baac
+                {"level_001baa", new string[] {"You take your time, drawing in every visible detail of the the sheer cliff face.  You see dark grey rock, solid, and sturdy looking.  You would not need to worry about it crumbling if you decide to climb, but you need to find a good spot...  You see a few areas that spark your interest...",
+                    "Area covered in vines",//leads to level 001baaa
+                    "Area with small indentions",//leads to level 001baab
+                    "Fallen tree leaning against the cliff" }},//leads to level 001baac
 
-                {"level_001bba", new string[] {"Text 001bba",
-                    "choice1bba",//leads to level 001bbaa
-                    "choice2bba",//leads to level 001bbab
-                    "choice3bba" }},//leads to level 001bbac
+                {"level_001bba", new string[] {"As you step outside, you hear partially damp leaves quietly pressed beneath your shoes.  It is probably mid day from your judgement, according to the placement of the sun in the sky.  You look behind you to notice it was indeed a cave you were in, and it's mouth was at the bottom of a sheer cliff face.  Before you, you see a dense moss covered forest stretching the distance of your range of sight...",
+                    "Inspect the cliff",//leads to level 001bbaa
+                    "Head out into the forest",//leads to level 001bbab
+                    "Inspect around the mouth of the cave" }},//leads to level 001bbac
 
                 {"level_001bca", new string[] {"Text 001bca",
                     "choice1bca",//leads to level 001bcaa
@@ -128,9 +128,37 @@ namespace ChooseYourPath
                 {"level_001cba", new string[] {"Text 001cba",
                     "choice1cba",//leads to level 001cbaa
                     "choice2cba",//leads to level 001cbab
-                    "choice3cba" }}//leads to level 001cbac
+                    "choice3cba" }},//leads to level 001cbac
 
+                {"level_001bbaa", new string[] {"You take your time, drawing in every visible detail of the the sheer cliff face.  You see dark grey rock, solid, and sturdy looking.  You would not need to worry about it crumbling if you decide to climb, but you need to find a good spot...  You see a few areas that spark your interest...",
+                    "Area covered in vines",//leads to level 001bbaaa
+                    "Area with small indentions",//leads to level 001bbaab
+                    "Fallen tree leaning against the cliff" }},//leads to level 001bbaac
 
+                {"level_001bbaaa", new string[] {"As you inspect the vines, you see they are about an inch or less in diameter and appear to stretch up the entire cliff.  They are alive and green, though they are beginning to dry out, either from heat or the coming of autumn.  You are not sure what time of year it is because it is a very beautiful day today.",
+                    "Climb the vines",//leads to level 001bbaaaa
+                    "Inspect the fallen tree",//leads to level 001bbaaab
+                    "Inspect the small indentions" }},//leads to level 001bbaaac
+
+                { "level_001bbaab", new string[] {"As you step up to inspect the indentions in the side of the cliff, you see they have been carved there to serve as a ladder for climbing the cliff.  Someone at somepoint used these regularly as they are a slightly different color than the rest of the rock.  They look sturdy and dependable, and would be similar to climbing a very, very tall ladder...",
+                    "Climb the indentions",//leads to level 001bbaaba
+                    "Inspect the vines",//leads to level 001bbaabb
+                    "Inspect the fallen tree" }},//leads to level 001bbaabc
+
+                { "level_001bbaac", new string[] {"You walk over to look at the fallen tree.  It appears to be rotted, and stretches up to meet the cliff about 20 feet above the ground.  The cliff is about 60 feet high by your estimate...",
+                    "Climb the tree",//leads to level 001bbaaca
+                    "Inspect the vines",//leads to level 001bbaacb
+                    "Inspect the indentions" }},//leads to level 001bbaacc
+
+                {"level_001bbaaaa", new string[] {"About 6 feet up the vines, you you start to feel the vine coming loose from the rock.  Small dirt clouds become visible where the vines lose their hold in the rock.  You quickly jump down deciding this probably is not a good idea...",
+                    "The heck with this, go to the forest",//leads to level 001bbaaaaa
+                    "Inspect the fallen tree",//leads to level 001bbaaaab
+                    "Inspect the small indentions" }},//leads to level 001bbaaaac
+
+                { "level_001bbaaca", new string[] {"You slowly climb the tree.  Small pieces of bark break off and fall as you straddle the trunk of the tree.  About 10 feet up the trunk you reach its branches.  You continue on, working your way between the branches, using them like hand grips.  You reach the top where it meets the rock face.  Not a second later, you feel gravity's pull as you quickly fall.  The tree breaking under your weight, falls in on you, crushing you like a shoe on a spider...",
+                    "Restart",//trigger word to start entire game over
+                    "Try Again",//trigger word to redo same exact level, same three choices
+                    "Exit" }},//trigger word to leave program
 
         };
         //to access the values levelsDic["level_001a"][0];
