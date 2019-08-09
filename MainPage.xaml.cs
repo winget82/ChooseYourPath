@@ -175,10 +175,10 @@ namespace ChooseYourPath
         {
             this.InitializeComponent();
 
-            bool alive = true;
+            //bool alive = true;
 
             //beginGame();
-            nextLevel(userChoice.CurrentLevel);
+            NextLevel(userChoice.CurrentLevel);
         }
 
         //Class to make an object that contains 3 boolean fields - choice 1, choice 2, and choice 3
@@ -207,14 +207,14 @@ namespace ChooseYourPath
             }
         }
 
-        public void levelChoices(string button1Text, string button2Text, string button3Text)
+        public void LevelChoices(string button1Text, string button2Text, string button3Text)
         {
             ChoiceButton1.Content = button1Text;
             ChoiceButton2.Content = button2Text;
             ChoiceButton3.Content = button3Text;
         }
         
-        public void nextLevel(string level)
+        public void NextLevel(string level)
         {
             if(level.Contains("Restart"))
             {
@@ -231,7 +231,7 @@ namespace ChooseYourPath
             else
             {
                 //load next level data from dictionary and update ReadingPane and button text
-                levelChoices(levelsDic[level][1], levelsDic[level][2], levelsDic[level][3]);
+                LevelChoices(levelsDic[level][1], levelsDic[level][2], levelsDic[level][3]);
                 ReadingPane.Text = levelsDic[level][0];
             }
         }
@@ -250,7 +250,7 @@ namespace ChooseYourPath
             //if the button clicked's content equals Restart, Try Again, or Exit
             //add that to the level string to get picked up by nextLevel()
             userChoice.CurrentLevel = updatedLevel;
-            nextLevel(userChoice.CurrentLevel);
+            NextLevel(userChoice.CurrentLevel);
         }
 
         private void ChoiceButton2_Click(object sender, RoutedEventArgs e)
@@ -267,7 +267,7 @@ namespace ChooseYourPath
             //if the button clicked's content equals Restart, Try Again, or Exit
             //add that to the level string to get picked up by nextLevel()
             userChoice.CurrentLevel = updatedLevel;
-            nextLevel(userChoice.CurrentLevel);
+            NextLevel(userChoice.CurrentLevel);
         }
 
         private void ChoiceButton3_Click(object sender, RoutedEventArgs e)
@@ -285,7 +285,7 @@ namespace ChooseYourPath
             //if the button clicked's content equals Restart, Try Again, or Exit
             //add that to the level string to get picked up by nextLevel()
             userChoice.CurrentLevel = updatedLevel;
-            nextLevel(userChoice.CurrentLevel);
+            NextLevel(userChoice.CurrentLevel);
         }
     }
 }
