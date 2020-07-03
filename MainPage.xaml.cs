@@ -130,6 +130,7 @@ namespace ChooseYourPath
                     "choice2cba",//leads to level 001cbab
                     "choice3cba" }},//leads to level 001cbac
 
+                //TIER 4 OF CHOICES
                 {"level_001bbaa", new string[] {"You take your time, drawing in every visible detail of the the sheer cliff face.  You see dark grey rock, solid, and sturdy looking.  You would not need to worry about it crumbling if you decide to climb, but you need to find a good spot...  You see a few areas that spark your interest...",
                     "Area covered in vines",//leads to level 001bbaaa
                     "Area with small indentions",//leads to level 001bbaab
@@ -140,6 +141,7 @@ namespace ChooseYourPath
                     "Inspect the fallen tree",//leads to level 001bbaaab
                     "Inspect the small indentions" }},//leads to level 001bbaaac
 
+                //TIER 5 OF CHOICES
                 { "level_001bbaab", new string[] {"As you step up to inspect the indentions in the side of the cliff, you see they have been carved there to serve as a ladder for climbing the cliff.  Someone at somepoint used these regularly as they are a slightly different color than the rest of the rock.  They look sturdy and dependable, and would be similar to climbing a very, very tall ladder...",
                     "Climb the indentions",//leads to level 001bbaaba
                     "Inspect the vines",//leads to level 001bbaabb
@@ -150,6 +152,7 @@ namespace ChooseYourPath
                     "Inspect the vines",//leads to level 001bbaacb
                     "Inspect the indentions" }},//leads to level 001bbaacc
 
+                //TIER 6 OF CHOICES
                 {"level_001bbaaaa", new string[] {"About 6 feet up the vines, you you start to feel the vine coming loose from the rock.  Small dirt clouds become visible where the vines lose their hold in the rock.  You quickly jump down deciding this probably is not a good idea...",
                     "The heck with this, go to the forest",//leads to level 001bbaaaaa
                     "Inspect the fallen tree",//leads to level 001bbaaaab
